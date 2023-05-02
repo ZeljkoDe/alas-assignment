@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Getting Started
+To run this React app, you can follow these steps:
+1. Clone the repository to your local machine: git clone {{ repo.url }}
+2. Navigate to the project directory.
+3. Install the required dependencies: npm install.
+4. Start the app: npm start.
+5. Open your browser and navigate to http://localhost:3000 to view the app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Application Overview
+The purpose of this application is to display a word cloud, where topics are differentiated by color and font size. The sentiment score is used to determine the color of the topic, while the popularity of the topic is determined by its volume and sentiment score. The font size of each topic is then set based on its popularity score.
 
-## Available Scripts
+## Popularity Score Calculation
+The popularity score is a metric that determines the relative importance of a topic in the data set, which is used to determine the font size of the topic in the word cloud. We use sentiment score and volume to calculate the popularity score for each topic.
 
-In the project directory, you can run:
+We chose to use sentiment score because it gives us an idea of the general sentiment around a topic. A high sentiment score means that people generally have positive feelings towards the topic, while a low score means the opposite. This information is useful in determining the overall importance of the topic.
 
-### `npm start`
+Volume is another important metric in calculating the popularity score. A topic with a high volume means that it is being discussed more frequently, which is an indication of its importance. Combining sentiment score and volume gives us a more comprehensive picture of the importance of a topic.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The calculateTopicPopularity function takes the sentiment score and volume of a topic and returns a popularity score, which is used to determine the font size of the topic in the word cloud.
