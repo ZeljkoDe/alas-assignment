@@ -1,10 +1,10 @@
 # Getting Started
 To run this React app, you can follow these steps:
-1. Clone the repository to your local machine: git clone {{ repo.url }}
+1. Clone the repository to your local machine: `git clone https://github.com/ZeljkoDe/alas-assignment.git`
 2. Navigate to the project directory.
-3. Install the required dependencies: npm install.
+3. Install the required dependencies: `npm install`.
 4. Start the app: npm start.
-5. Open your browser and navigate to http://localhost:3000 to view the app.
+5. Open your browser and navigate to `http://localhost:3000` to view the app.
 
 ## Application Overview
 The purpose of this application is to display a word cloud, where topics are differentiated by color and font size. The sentiment score is used to determine the color of the topic, while the popularity of the topic is determined by its volume and sentiment score. The font size of each topic is then set based on its popularity score.
